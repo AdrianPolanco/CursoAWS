@@ -1,0 +1,17 @@
+﻿using MediatR;
+
+namespace Consumers.Messages
+{
+    public class CustomerUpdated: ISqsMessage
+    {
+        public Guid Id { get; init; } = default!;
+
+        public string GitHubUsername { get; init; } = default!;
+
+        public string FullName { get; init; } = default!;
+
+        public string Email { get; init; } = default!;
+
+        public DateTime DateOfBirth { get; init; }
+    }
+}
